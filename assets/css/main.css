@@ -58,6 +58,7 @@ header {
 	background-image: url(../img/cropped-Lyft-Promo-Codes-car-1.jpg);
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
 	height: 700px;
 }
@@ -80,7 +81,6 @@ header {
 	color: #75726C;
 	font-size: 0.9em;
 	margin-top: 15px;
-	font-weight: lighter;
 }
 .formulario input {
 	background-color: #EDE9E2;
@@ -90,21 +90,24 @@ header {
     border: 0;
     border-bottom: 1px solid #73705F;
     outline: 0;
-    margin-bottom: 30px;
 }
 /*boton*/
-#sing-up{
-	text-decoration: none;
+#sign-up{
 	color: #EDE9E2;
 	font-size: 0.9em;
 	background-color: #E56385;
 	padding: 13px 30px;
+	margin-top: 20px;
+
+	
+	/*borde*/
+	border: 0;
 	-webkit-border-radius: 15px;
 	-moz-border-radius: 15px;
 	border-radius: 15px;
 }
 
-#sing-up i {
+#sign-up i {
 	font-size: 1.3em;
 }
 
@@ -115,7 +118,122 @@ header {
 }
 
 /*SECCTION PLAY WITH LYFT*/
-.cordenadas {
-	height: 500px;
+#play {
+	height: 520px;
 	background-color: #00B2A9;
+	text-align: center;
+	padding: 80px 0;
+	box-sizing: border-box;
+}
+#play h1{
+	color: #75726C;
+	background-color: #EDE9E2;
+	margin-top: 0;
+	font-size: 3em;
+	padding: 18px;
+}
+
+/*CAJITA*/
+.cordenadas{
+	background-color: #EDE9E2;
+	width: 70%;
+	height: 270px;
+	margin: 0 auto;
+	padding: 20px 10px;
+	box-sizing: border-box;
+}
+.auto{
+	display: inline-block;
+}
+.auto input {
+	background-color: #EDE9E2;
+	width: 370px;
+	height: 40px;
+	margin-top: 50px;
+	border: 0;
+    border-bottom: 1px solid #75726C;
+    outline: 0;
+}
+.auto i{
+	font-size: 2em;
+	color: #75726C;
+	margin-right: 10px;
+}
+/*boton*/
+#start{
+	background-color: #00B2A9;
+	padding: 20px 50px;
+	margin-top: 40px;
+	text-decoration: none;
+	color: #EDE9E2;
+	width: 95%;
+	font-size: 1em;
+
+	/*borde*/
+	border: 0;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	border-radius: 15px;
+
+	/*sombra*/
+	-webkit-box-shadow: -2px 15px 26px -22px rgba(0,0,0,0.75);
+	-moz-box-shadow: -2px 15px 26px -22px rgba(0,0,0,0.75);
+	box-shadow: -2px 15px 26px -22px rgba(0,0,0,0.75);
+}
+
+/*FOOTER*/
+.menu-footer {
+	background-color: #75726C;
+}
+.menu-bottom {
+	padding-top: 30px;
+	height: 150px;
+	color: #EDE9E2;
+	margin: 0 auto;
+	width: 70%;
+}
+
+.izq {
+	float: left;
+}
+.menu-bottom h3{
+	font-size: 1.7em;
+	font-weight: normal;
+	margin: 0;
+}
+.izq p {
+	margin-top: 15px;
+}
+.menu-pie{
+	float: right;
+	margin-right: 200px;
+}
+.menu-pie ul{
+	padding: 0;
+}
+.menu-pie ul li{
+	list-style: none;
+}
+.menu-pie ul li a {
+	text-decoration: none;
+	color: #EDE9E2;
+}
+
+
+/*FOOTER 2*/
+.pie {
+	background-color: #63615C;
+}
+.content {
+	padding: 20px;
+	height: 20px;
+	color: #EDE9E2;
+	margin: 0 auto;
+	width: 70%;
+}
+.content p {
+	margin: 0;
+}
+.lateral {
+	float: right;
 }
