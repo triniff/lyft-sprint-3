@@ -17,8 +17,10 @@ var start = document.getElementById("start");
 start.addEventListener("click", function (){
 	var posX = document.getElementsByClassName("posicionX")[0].value; //obtener numero
 	var posY = document.getElementsByClassName("posicionY")[0].value; //obtener numero
-	console.log(posX);
-	console.log(posY);
+
+	document.getElementsByClassName("posicionX")[0].value = "";
+	document.getElementsByClassName("posicionY")[0].value = "";
+	
 	var play = document.getElementById("play");
 	var cordenadas = document.getElementsByClassName("cordenadas")[0];
 
@@ -36,11 +38,34 @@ start.addEventListener("click", function (){
 	  [0,0,0,0,0,0,0,0,0,0],
 	  [0,0,0,0,0,0,0,0,0,0]
 	]
-	//Ingreso el auto en la posicion 3,5
-	/*Me traigo los valores de los inputs*/
-	
+/* //TRATANDO DE CREAR CONSTRUCTOR
+	function PosAuto(xinicial, yinicial){
+		this.yinicial = fila;
+		this.xinicial = casilla;
+		this.posicion = function(){
+				//Recorro el arreglo para dibujar el tablero
 
-	tablero[posX][posY] = "A";
+			for(var i = 0; i < tablero.length; i++){
+				 this.fila = document.createElement("div");
+				 this.fila.classList.add("fila");
+				  for(var j = 0; j < tablero[i].length; j++){
+				    this.casilla = document.createElement("div");
+				    this.casilla.innerHTML = tablero[i][j];
+				    this.casilla.classList.add("casilla")
+				    this.fila.appendChild(this.casilla);
+				   }
+				return caja.appendChild(this.fila);
+			}
+		}
+		return console.log(this.posicion());
+
+	}
+
+	var movAuto = new PosAuto(posX,posY); */
+	
+	var autito = document.createElement("img");
+	autito.setAttribute("src", "assets/img/car.png");
+	tablero[posX][posY] = autito;
 
 	//Variables temporales
 	var fila, casilla;
@@ -49,23 +74,23 @@ start.addEventListener("click", function (){
 	for(var i = 0; i < tablero.length; i++){
 	  fila = document.createElement("div");
 	  fila.classList.add("fila");
-	  for(var j = 0; j < tablero[i].length; j++){
+	  for(var j = 0 ; j < tablero[i].length; j++){
 	    casilla = document.createElement("div");
-	    casilla.innerHTML = tablero[i][j];
-	    casilla.classList.add("casilla")
+	    var c = tablero[i][j];
+	    ca = document.createTextNode(c);
+	    casilla.appendChild(ca);
+	    casilla.classList.add("casilla");
 	    fila.appendChild(casilla);
 	  }
 	  caja.appendChild(fila);
 	}
 
 
+/*
 	var autito = document.createElement("img");
 	autito.setAttribute("src", "assets/img/car.png");
 	pista.appendChild(autito);
-	caja.appendChild(pista); 
+	caja.appendChild(pista); */
 	play.appendChild(caja);
-
-
-	/*CREANDO GRILLA*/
 
 })
