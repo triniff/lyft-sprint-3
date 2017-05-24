@@ -22,7 +22,7 @@ start.addEventListener("click", function (){
 	document.getElementsByClassName("posicionX")[0].value = "";
 	document.getElementsByClassName("posicionY")[0].value = "";
 	
-	var play = document.getElementById("play");
+		var play = document.getElementById("play");
 	var cordenadas = document.getElementsByClassName("cordenadas")[0];
 
 	play.removeChild(cordenadas); //eliminando caja
@@ -91,4 +91,6 @@ start.addEventListener("click", function (){
 	caja.appendChild(pista); */
 	play.appendChild(caja);
 
+
+	
 })
