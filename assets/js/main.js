@@ -12,11 +12,12 @@ signUp.addEventListener("click", function(){
 })
 
 
+//FUNCION CON GRILLA
 
 var start = document.getElementById("start");
 start.addEventListener("click", function (){
-	var posX = document.getElementsByClassName("posicionX")[0].value; //obtener numero
-	var posY = document.getElementsByClassName("posicionY")[0].value; //obtener numero
+	var posX = document.getElementsByClassName("posicionY")[0].value; //obtener numero
+	var posY = document.getElementsByClassName("posicionX")[0].value; //obtener numero
 
 	document.getElementsByClassName("posicionX")[0].value = "";
 	document.getElementsByClassName("posicionY")[0].value = "";
@@ -62,10 +63,9 @@ start.addEventListener("click", function (){
 	}
 
 	var movAuto = new PosAuto(posX,posY); */
-	
 	var autito = document.createElement("img");
 	autito.setAttribute("src", "assets/img/car.png");
-	tablero[posX][posY] = autito;
+	tablero[posX][posY] = "<div> <img src='assets/img/car.png' alt='placeholder+image'> </div>";
 
 	//Variables temporales
 	var fila, casilla;
@@ -76,11 +76,9 @@ start.addEventListener("click", function (){
 	  fila.classList.add("fila");
 	  for(var j = 0 ; j < tablero[i].length; j++){
 	    casilla = document.createElement("div");
-	    var c = tablero[i][j];
-	    ca = document.createTextNode(c);
-	    casilla.appendChild(ca);
-	    casilla.classList.add("casilla");
-	    fila.appendChild(casilla);
+ 	    casilla.innerHTML = tablero[i][j];
+ 	    casilla.classList.add("casilla")
+ 	    fila.appendChild(casilla)
 	  }
 	  caja.appendChild(fila);
 	}
