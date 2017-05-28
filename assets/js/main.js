@@ -22,7 +22,7 @@ start.addEventListener("click", function (){
 	document.getElementsByClassName("posicionX")[0].value = "";
 	document.getElementsByClassName("posicionY")[0].value = "";
 	
-		var play = document.getElementById("play");
+	var play = document.getElementById("play");
 	var cordenadas = document.getElementsByClassName("cordenadas")[0];
 
 	play.removeChild(cordenadas); //eliminando caja
@@ -32,40 +32,47 @@ start.addEventListener("click", function (){
 	
 	//Defino el tablero
 	var tablero = [
-	  [0,0,0,0,0,0,0,0,0,0],
-	  [0,0,0,0,0,0,0,0,0,0],
-	  [0,0,0,0,0,0,0,0,0,0],
-	  [0,0,0,0,0,0,0,0,0,0],
-	  [0,0,0,0,0,0,0,0,0,0],
-	  [0,0,0,0,0,0,0,0,0,0]
+	  ["","","","","","","","","",""],
+	  ["","","","","","","","","",""],
+	  ["","","","","","","","","",""],
+	  ["","","","","","","","","",""],
+	  ["","","","","","","","","",""],
+	  ["","","","","","","","","",""],
 	]
-/* //TRATANDO DE CREAR CONSTRUCTOR
+
+	//TRATANDO DE CREAR CONSTRUCTOR
 	function PosAuto(xinicial, yinicial){
-		this.yinicial = fila;
-		this.xinicial = casilla;
+		this.yinicial = yinicial;
+		this.xinicial = xinicial;
+		console.log(yinicial, xinicial);
 		this.posicion = function(){
-				//Recorro el arreglo para dibujar el tablero
+			tablero[xinicial][yinicial] = "<div> <img src='assets/img/car.png' alt='placeholder+image'> </div>";
 
+			//Variables temporales
+			var fila, casilla;
+
+			//Recorro el arreglo para dibujar el tablero
 			for(var i = 0; i < tablero.length; i++){
-				 this.fila = document.createElement("div");
-				 this.fila.classList.add("fila");
-				  for(var j = 0; j < tablero[i].length; j++){
-				    this.casilla = document.createElement("div");
-				    this.casilla.innerHTML = tablero[i][j];
-				    this.casilla.classList.add("casilla")
-				    this.fila.appendChild(this.casilla);
-				   }
-				return caja.appendChild(this.fila);
+			  fila = document.createElement("div");
+			  fila.classList.add("fila");
+			  for(var j = 0 ; j < tablero[i].length; j++){
+			    casilla = document.createElement("div");
+		 	    casilla.innerHTML = tablero[i][j];
+		 	    casilla.classList.add("casilla")
+		 	    fila.appendChild(casilla)
+			  }
+			  caja.appendChild(fila);
 			}
-		}
-		return console.log(this.posicion());
 
+			play.appendChild(caja);
+ 	
+		}
+		return this.posicion();
 	}
 
-	var movAuto = new PosAuto(posX,posY); */
-	var autito = document.createElement("img");
-	autito.setAttribute("src", "assets/img/car.png");
-	tablero[posX][posY] = "<div> <img src='assets/img/car.png' alt='placeholder+image'> </div>";
+	var movAuto = new PosAuto(posX,posY); 
+
+/*	tablero[posX][posY] = "<div> <img src='assets/img/car.png' alt='placeholder+image'> </div>";
 
 	//Variables temporales
 	var fila, casilla;
@@ -83,14 +90,8 @@ start.addEventListener("click", function (){
 	  caja.appendChild(fila);
 	}
 
-
-/*
-	var autito = document.createElement("img");
-	autito.setAttribute("src", "assets/img/car.png");
-	pista.appendChild(autito);
-	caja.appendChild(pista); */
 	play.appendChild(caja);
-
+*/
 
 	
 })

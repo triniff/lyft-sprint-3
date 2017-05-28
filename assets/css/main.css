@@ -21,7 +21,6 @@ body {
 /*Nav*/
 nav {
 	background-color: #E56385;
-	padding: 10px;
 	width: 100%;
 	height: 50px;
 	position: fixed;
@@ -32,26 +31,24 @@ nav img {
 	width: 60px;
 	position: absolute;
 	margin-left: 185px;
+	margin-top: 5px;
 }
 nav ul{
-	margin-right: 180px;
- 	position: absolute;
+	position: absolute;
 	right: 0;
+	margin-right: 200px;
 }
-nav ul li {
-	list-style: none;
+nav ul li{
 	display: inline-block;
+	list-style: none;
 }
-nav a{
+nav ul li a {
+	padding: 15px;
 	text-decoration: none;
 	color: #EDE9E2;
-	margin-right: 25px;
 }
-
 nav a:hover {
 	background-color: #E54E79;
-	padding: 23px 10px;
-	box-sizing: content-box;
 }
 
 /*header*/
@@ -240,8 +237,10 @@ header {
 	margin: 0 auto;
 	width: 70%;
 }
-.content p {
+.content a {
 	margin: 0;
+	text-decoration: none;
+	color: #EDE9E2;
 }
 .lateral {
 	float: right;
@@ -249,11 +248,11 @@ header {
 
 /*CAJA AUTITO*/
 .caja {
-	width: 49%;
+	width: 700px;
 	height: 360px;;
 	background-color: #EDE9E2;
 	margin: 0 auto;
-	padding: 16px;
+	padding: 20px;
 	box-sizing: border-box;
 	position: relative;
 
@@ -263,7 +262,7 @@ header {
 	box-sizing: border-box;
 	  /*Es mejor con float:left*/
 	display: inline-block;
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	width: 10%;
 	height: 55px;
@@ -272,7 +271,7 @@ header {
 	float: left;
 }
 .fila{
-	margin: 0;
+	margin: 0 auto;
 	padding: 0;
 	width: 600px;
 	box-sizing: border-box;
